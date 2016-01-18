@@ -56,19 +56,22 @@ header{
   height: 3000px;
   color: #995253;
   .main_information{
-    width: 730px;
+    width: 790px;
     margin: 0 auto;
     .about_me{
       display: inline-block;
       border: dotted;
       background: black;
-      width: 600px;
+      width: 620px;
       //opacity: .5;
       h1{
         text-align: center;
+        font-size: 55px;
       }
       p{
         text-align: center;
+        font-size: 25px;
+        color: #1aa890;
       }
     }
     .picture{
