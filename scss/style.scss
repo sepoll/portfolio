@@ -3,6 +3,7 @@
   font-family: Indie Flower;
   margin: 0;
 }
+//section with links
 section{
   //background: url("../img/background-horz.png");
   background-color: #4f71b0;
@@ -24,6 +25,7 @@ section{
         position: relative;
         z-index: 0;
         cursor: pointer;
+        // pseudoelements which have 0 opacity
         &:before, &:after{
           position: absolute;
           left: 0px;
@@ -34,14 +36,17 @@ section{
           opacity: 0;
           transition: all 0.3s;
         }
+        //positioning of pseudoelement before
         &:before{
           top: 0px;
           transform: translateY(10px);
         }
+        //positioning of pseudoelement after
         &:after{
           bottom: 0px;
           transform: translateY(-10px);
         }
+        //on hover pseudoelements become opacity 1
         &:hover:before, &:hover:after{
           opacity: 1;
           transform: translateY(0px);
@@ -50,6 +55,7 @@ section{
     }
   }
 }
+//about me section
 header{
   background: url("../img/background-plaid.png");
   background-color: #6495ED;
