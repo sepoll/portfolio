@@ -1,13 +1,85 @@
+@import "animated_words";
+@import "classes";
 *{
   box-sizing: border-box;
-  font-family: Indie Flower;
+  font-family: Arial;
   margin: 0;
 }
 //section with links
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.site-header{
+  display: flex;
+  align-items: center;
+  background: #0D1313;
+  color: white;
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    .site-nav {
+      background: #222;
+      order: 2;
+      flex-basis: 100%;
+      a {
+        font-size: 1rem;
+      }
+    }
+    .account-actions {
+      margin-left: auto;
+    }
+  }
+  .logo {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+  }
+  .site-nav {
+    text-align: center;
+    flex: 1;
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-flex;
+    }
+    .active {
+      a {
+        background: darken(#5DCCAF, 40%);
+        color: #5DCCAF;
+      }
+    }
+    a {
+      color: #E2E6E7;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 20px;
+      display: inline-block;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+  .account-actions {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    .account-dropdown {
+      margin-right: 10px;
+      > ul {
+        display: none;
+      }
+    }
+  }
+  .sign-out-link {
+    color: #E2E6E7;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+}
 section{
-  //background: url("../img/background-horz.png");
-  background-color: #4f71b0;
-	background-size: cover;
   color: #995253;
   .main{
     margin: 0 auto;
@@ -58,44 +130,80 @@ section{
 //about me section
 header{
   background: url("../img/background-plaid.png");
-  background-color: #6495ED;
-  height: 3000px;
+  background-color: white;
   color: #995253;
-  .main_information{
-    width: 790px;
+  .about_me{
     margin: 0 auto;
-    .about_me{
+    background: #97b8f5;
+    width: 730px;
+    max-height: 1.2em;
+    opacity: .9;
+    box-shadow: 5px 5px 5px #8b8686;
+    &:hover{
+      background: #97b8f5;
+      box-shadow: 10px 10px 10px #8b8686;
+      opacity: 1;
+      max-height: 600px;
+      -webkit-transition: max-height 2s;
+      -moz-transition: max-height 2s;
+      -ms-transition: max-height 2s;
+      -o-transition: max-height 2s;
+      transition: max-height 2s;
+    }
+    .text{
       display: inline-block;
-      border: dotted;
-      background: black;
-      width: 620px;
-      //opacity: .5;
+
       h1{
+        width: 350px;
+        display: inline-block;
         text-align: center;
         font-size: 55px;
       }
-      p{
-        text-align: center;
-        font-size: 25px;
-        color: #1aa890;
+    }
+  }
+  .accordion{
+    display: inline-block;
+    text-align: left;
+    margin: 1%;
+    width: 70%;
+    &:hover{
+    // max-height technique
+      .accordion-content{
+      // If use the "height: auto", the effect not works. Is necessary some value for the CSS create a CSS animate, and we can use "max-height" with a great value for emulate this effect.
+        max-height: 300px;
       }
     }
-    .picture{
-      border: solid;
-      border-radius: 50%;
-      display: inline-block;
-      height: 150px;
-      width: 150px;
+    .accordion-content{
+      -webkit-transition: max-height 1s;
+      -moz-transition: max-height 1s;
+      -ms-transition: max-height 1s;
+      -o-transition: max-height 1s;
+      transition: max-height 1s;
+      background: #e5feff;
       overflow: hidden;
-      float: right;
-      transition:All 1s ease;
-      transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
-      &:hover{
-        transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
+      // "height: 0" not work with css transitions
+      max-height: 0;
+      .accordion-inner{
+        padding: 0 15px;
       }
-      img{
-        width: 150px;
-        height: 150px;
+    }
+    .accordion-toggle{
+      -webkit-transition: background .1s linear;
+      -moz-transition: background .1s linear;
+      -ms-transition: background .1s linear;
+      -o-transition: background .1s linear;
+      transition: background .1s linear;
+      background: #00b8c9;
+      border-radius: 3px;
+      color: #fff;
+      display: block;
+      font-size: 30px;
+      margin: 0 0 10px;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      &:hover{
+        background: darken(#00b8c9, 15%);
       }
     }
   }

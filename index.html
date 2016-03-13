@@ -15,6 +15,25 @@
 	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<header class="site-header">
+	  <a href="#0" class="logo">Logo</a>
+	  <nav class="site-nav">
+	    <ul>
+	      <li class="active"><a href="#0">Revenue</a></li>
+	      <li><a href="#0">Churn</a></li>
+	      <li><a href="#0">Customers</a></li>
+	    </ul>
+	  </nav>
+	  <div class="account-actions">
+	    <div class="account-dropdown">
+	      ⚙
+	      <ul>
+	        <li>Your Account</li>
+	      </ul>
+	    </div>
+	    <a href="#0" class="sign-out-link">Sign Out</a>
+	  </div>
+	</header>
 	<section>
 		<div role="banner" class="main">
 			<nav>
@@ -27,22 +46,33 @@
 		</div>
 	</section>
 	<header>
-		<div class="main_information">
 			<div class="about_me">
-				<h1>Hi my name is Sebastian,</h1>
-				<p>and I am a beginner web designer Front-End Developer</p>
-				<p>I have good knowledge about HTML5, CSS 3.0/Sass, JavaScript, JQuery.</p>
-				<p>I love to learn everything about web designing.</p>
-				<p>If there is something i can do to you feel free to <span>contact me</span>.</p>
+				<div class="text">
+					<h1>[ About me ]</h1>
+					<div class="animated-words">
+		        <span>dog</span>
+		        <span>horse</span>
+		        <span>frog</span>
+		        <span>cat</span>
+		        <span>mouse</span>
+		        <span>rabbit</span>
+    			</div>
+				</div>
 			</div>
-			<div class="picture">
-				<img src="img/me.jpg">
+			<div class="accordion">
+  			<a href="#" class="accordion-toggle">Hover for height animate</a>
+  			<div class="accordion-content">
+    			<div class="accordion-inner">
+	      		<p>For animate the "height" of element with CSS Transitions you need use "max-height".</p>
+	      		<p>If use the "height: auto", the effect not works. Is necessary some value for the CSS create a CSS animate, and you can use "max-height" with a great value for emulate this effect.</p>
+    			</div>
+  			</div>
 			</div>
-		</div>
 	</header>
 	<article>
 	</article>
 	<footer>
 	</footer>
+	<script src="js/main.js"></script>
 </body>
 </html>

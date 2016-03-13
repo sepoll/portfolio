@@ -1,0 +1,12 @@
+.big{
+  margin: 0 auto;
+  background: #97b8f5;
+  width: 730px;
+  height: 200px;
+  opacity: .9;
+  box-shadow: 5px 5px 5px #8b8686;
+  &:hover{
+    box-shadow: 10px 10px 10px #8b8686;
+    opacity: 1;
+  }
+}
