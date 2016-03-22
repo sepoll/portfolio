@@ -129,14 +129,17 @@ section{
 }
 //about me section
 header{
-  background: url("../img/background-plaid.png");
+  //background: url("../img/background-plaid.png");
   background-color: white;
   color: #995253;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
   .about_me{
-    margin: 0 auto;
     background: #97b8f5;
     width: 730px;
-    max-height: 1.2em;
+    max-height: 4em;
     opacity: .9;
     box-shadow: 5px 5px 5px #8b8686;
     overflow: hidden;
@@ -165,8 +168,8 @@ header{
   .accordion{
     display: inline-block;
     text-align: left;
-    margin: 1%;
-    width: 70%;
+  //  margin: 1%;
+    width: 730px;
     &:hover{
     // max-height technique
       .accordion-content{

@@ -172,14 +172,16 @@ section {
           transform: translateY(0px); }
 
 header {
-  background: url("../img/background-plaid.png");
   background-color: white;
-  color: #995253; }
+  color: #995253;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center; }
   header .about_me {
-    margin: 0 auto;
     background: #97b8f5;
     width: 730px;
-    max-height: 1.2em;
+    max-height: 4em;
     opacity: .9;
     box-shadow: 5px 5px 5px #8b8686;
     overflow: hidden; }
@@ -203,8 +205,7 @@ header {
   header .accordion {
     display: inline-block;
     text-align: left;
-    margin: 1%;
-    width: 70%; }
+    width: 730px; }
     header .accordion:hover .accordion-content {
       max-height: 300px; }
     header .accordion .accordion-content {
